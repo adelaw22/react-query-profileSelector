@@ -1,0 +1,56 @@
+.card-id{
+    padding:20px;
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+.card-id .users-details{
+    display: flex;
+}
+
+.users-details .img-wrapper{
+    min-width: 100px;
+}
+.details-wrapper{
+    padding-left: 30px;
+    width: 100%;
+}
+.details-wrapper p{
+    margin-bottom:8px;
+}
+.details-wrapper .user-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.details-wrapper .user-location{
+    font-size: 15px;
+}
+
+.img-wrapper img{
+    width: 90%;
+    border-radius: 50%;
+    border: 6px solid rgb(117, 214, 209);
+}
+
+.users-contact{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    font-size: 12px;
+}
+
+.users-contact span{
+    margin-left:6px;
+}
+.users-contact button{
+    background-color: rgb(117, 214, 209);
+    border-radius: 14px;
+    font-size: 20px;
+    padding: 4px 16px;
+    border: none;
+    color: #fff;
+    box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12);
+
+}

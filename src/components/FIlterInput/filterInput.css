@@ -1,0 +1,27 @@
+.input-wrapper{
+    color: rgba(0,0,0,.54);
+    font-size: 18px;
+    min-width: 40%;
+}
+
+.input-wrapper svg{
+    margin-left: 10px;
+    z-index: 1;
+    align-self: center;
+    font-size: 20px
+}
+
+.input-wrapper input{
+    color: rgba(0,0,0,.54);
+    padding: 12px 50px 12px;
+    border-radius: 16px;
+    border: none;
+    background: #bebaba8a;
+    margin-left: -35px;
+    width: 100%;
+    
+}
+
+.input-wrapper input::placeholder{
+    color: rgba(0,0,0,.54);
+}

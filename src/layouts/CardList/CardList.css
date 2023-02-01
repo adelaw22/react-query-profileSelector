@@ -1,0 +1,38 @@
+.footer-card{
+    display:flex;
+    justify-content: space-between;
+}
+
+.download-wrapper button{
+    background-color: rgb(121, 70, 193);
+    padding:10px 16px;
+    border:none;
+    border-radius:22px;
+    font-size: 14px;
+    color: #fff;
+}
+.download-wrapper svg{
+    margin-right:10px ;
+}
+
+.footer-card .card-pagination{
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+ .card-pagination li {
+    border-radius: 10px;
+    padding: 3px 12px;
+    font-size: 20px; 
+    margin-inline:4px ;
+ }
+li a{
+    color: #fff;
+}
+ .card-pagination .previous{
+    background-color: rgb(226, 227, 236);
+ }
+
+ .card-pagination .next{
+    background-color: rgb(38, 42, 65);
+ }
