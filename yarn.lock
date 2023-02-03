@@ -949,6 +949,11 @@ json-parse-even-better-errors@^2.3.0:
   resolved "https://registry.yarnpkg.com/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz#7c47805a94319928e05777405dc12e1f7a4ee02d"
   integrity sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==
 
+json-to-csv-export@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/json-to-csv-export/-/json-to-csv-export-2.1.0.tgz#9d0dd47582ac4b7b75f07bea758b76a7546c63ac"
+  integrity sha512-xAkBf6f0uLqG7gtCuulqp6BtbIswYMiSTCJ2ctuh2w1W5XvQKywX4Ppkr5Tgm3JUHLgeOspli8zA9Hy494X5WA==
+
 json5@^2.2.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
@@ -1159,6 +1164,13 @@ react-is@^16.13.1, react-is@^16.3.2, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-json-to-csv@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-json-to-csv/-/react-json-to-csv-1.2.0.tgz#b19a8448843bc84faba7ed05445d89a9abecf9b4"
+  integrity sha512-4yBorgPrkRQDRpbTKDq5vXIb4+CYBorwFxbYyKddmTnFlUGQb/2EOyIrSq6Elp/ygYCVKJK2IwfhEYUaDVyCpw==
+  dependencies:
+    json-to-csv-export "2.1.0"
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"

@@ -30,14 +30,12 @@ const UsersBtn = [
     },
   },
 ]
-const FilterCol = ({ userArray, setUserArray }) => {
+const FilterCol = ({ data, setUserArray }) => {
   const filterbyGender = (label) => {
     if (label === 'All') {
-      setUserArray(userArray)
+      setUserArray(data)
     } else {
-      const result = userArray?.filter(
-        (item) => item.gender === label.toLowerCase(),
-      )
+      const result = data?.filter((item) => item.gender === label.toLowerCase())
       setUserArray(result)
     }
   }
@@ -52,7 +50,7 @@ const FilterCol = ({ userArray, setUserArray }) => {
       </div>
       <FilterInput
         placeholder="Find a user"
-        userArray={userArray}
+        data={data}
         setUserArray={setUserArray}
       />
       <div>

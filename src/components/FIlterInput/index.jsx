@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MdOutlineSearch } from 'react-icons/md'
 import './filterInput.css'
 
-export const FilterInput = ({ placeholder, userArray, setUserArray }) => {
+export const FilterInput = ({ placeholder, data, setUserArray }) => {
   const [inputValue, setInputValue] = useState('')
 
-  const filterBySearch = (event) => {
-    setInputValue(event.target.value)
-
+  useEffect(() => {
     if (inputValue.toLowerCase() === '') {
-      setUserArray(userArray)
-    } else {
-      const updatedList = userArray.filter((item) =>
-        item?.name.first.toLowerCase().includes(inputValue),
-      )
-      setUserArray(updatedList)
+      setUserArray(data)
+      return
     }
-  }
+    const updatedList = data.filter((item) => {
+      const name = `${item.name.first} ${item.name.last}`
+
+      return name.toLowerCase().includes(inputValue)
+    })
+    setUserArray(updatedList)
+  }, [inputValue])
 
   return (
     <div className="d-flex my-3 input-wrapper">
       <MdOutlineSearch />
       <input
         placeholder={placeholder}
-        onChange={filterBySearch}
+        onChange={(e) => setInputValue(e.target.value)}
         value={inputValue}
       />
     </div>

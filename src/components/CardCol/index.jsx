@@ -4,8 +4,9 @@ import { Card } from 'react-bootstrap'
 import { FilterInput } from '../FIlterInput'
 import { CustomDropDown } from '../CustomDropDown'
 import { ToggleSwitch } from '../ToggleSwitch'
+import './cardCol.css'
 
-const CardCol = ({ data }) => {
+const CardCol = ({ data, setUserArray }) => {
   const [checked, setChecked] = useState(true)
 
   return (
@@ -14,10 +15,14 @@ const CardCol = ({ data }) => {
         <h3>All Users</h3>
         <p>Filter by</p>
 
-        <div className="filter-components d-flex">
-          <FilterInput />
-          <div className="d-flex">
-            <CustomDropDown />
+        <div className="filter-components">
+          <FilterInput
+            placeholder="find in list"
+            data={data}
+            setUserArray={setUserArray}
+          />
+          <div className="toggle-DD">
+            <CustomDropDown data={data} setUserArray={setUserArray} />
             <ToggleSwitch checked={checked} setChecked={setChecked} />
           </div>
         </div>

@@ -7,24 +7,26 @@ import axios from 'axios'
 const MainPage = () => {
   const [userArray, setUserArray] = useState()
 
-  const { data } = useQuery(
-    'usersData',
-    () => axios.get('https://randomuser.me/api/?results=12'),
-    {
-      onSuccess: (res) => setUserArray(res.data.results),
-    },
+  const { data, isLoading } = useQuery('usersData', () =>
+    axios.get('https://randomuser.me/api/?results=12').then((response) => {
+      setUserArray(response.data.results)
+      return response.data.results
+    }),
   )
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
 
   return (
     <div className="container">
       {' '}
       <div className="row">
-        <div className="col-md-5">
-          <FilterCol userArray={userArray} setUserArray={setUserArray} />
+        <div className="col-lg-5 col-sm-12">
+          <FilterCol data={data} setUserArray={setUserArray} />
         </div>
 
-        <div className="col-md-7 py-5">
-          <CardCol data={userArray} />
+        <div className="col-lg-7 col-sm-12 py-5">
+          <CardCol data={userArray} setUserArray={setUserArray} />
         </div>
       </div>
     </div>

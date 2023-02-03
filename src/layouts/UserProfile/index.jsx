@@ -9,14 +9,7 @@ const UserProfile = () => {
   const { data } = useOutletContext()
   const { userId } = useParams()
 
-  const eachUser = data.find((user) => user.login.username === userId)
-
-  // useEffect(() => {
-  //   localStorage.setItem('user', JSON.stringify(eachUser))
-  // }, [])
-
-  // const userInfo = JSON.parse(localStorage.getItem('user'))
-  // console.log(userInfo)
+  const eachUser = data?.find((user) => user.login.username === userId)
 
   return (
     <div>

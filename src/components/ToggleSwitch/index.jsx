@@ -8,7 +8,7 @@ export const ToggleSwitch = ({ checked, setChecked }) => {
   }
 
   return (
-    <label>
+    <label style={{ display: 'flex', alignItems: 'center' }}>
       <Switch
         onColor="#30bbb5"
         onHandleColor="#30bbb5"
@@ -20,7 +20,7 @@ export const ToggleSwitch = ({ checked, setChecked }) => {
         activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
         className="react-switch"
       />
-      <span>Show Country</span>
+      <span className="ms-2">Show Country</span>
     </label>
   )
 }

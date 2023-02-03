@@ -32,3 +32,9 @@ p{
 .btns-wrapper p{
     margin-top:14px;
 }
+@media (max-width: 960px){
+    .filter-container{
+        top: 10%;
+        margin-bottom: 40px
+    }
+}
