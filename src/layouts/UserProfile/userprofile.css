@@ -1,0 +1,68 @@
+.backBtn{
+    width: fit-content;
+    margin-block: 24px;
+    cursor: pointer;
+}
+.backBtn a{
+    color: #000;
+    text-decoration: none;
+}
+.backBtn svg{
+    color: rgb(117, 214, 209);
+    margin-right: 10px;
+    font-size: 24px;
+}
+.profile-wrapper{
+    display: flex;
+}
+
+.profile-wrapper .img-wrapper{
+    margin-right: 30px;
+    min-width: 100px;
+}
+
+.img-wrapper img{
+    width: 100%;
+    border-radius: 50%;
+    border: 6px solid rgb(117, 214, 209);
+}
+.details-container p{
+   margin-bottom:16px;
+   font-weight: normal;
+}
+
+.details-container .user_name{
+    font-size: 24px;
+    font-weight: bold;
+}
+.details-container .user_age{
+    font-weight: 300;
+}
+.details-container .user_mail{
+    display: flex;
+    align-items: center;
+    padding: 0px 18px;
+    margin-block:10px 16px;
+    border-radius: 30px;
+    background: rgba(0,0,0,.12);
+}
+.user_mail svg{
+    color:rgba(0,0,0,.26);
+    font-size: 18px;
+    margin-right: 10px;
+}
+.user_mail p{
+    margin-block: 10px;
+}
+.details-container .user_date{
+    background-color:rgb(247, 217, 242) ;
+}
+.details-container .user_num{
+    opacity: 1;
+    color: rgb(186, 189, 209);
+}
+.user_num svg{
+    color:rgba(0,0,0,.26);
+    font-size: 18px;
+    margin-right: 10px;
+}

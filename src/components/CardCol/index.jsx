@@ -6,6 +6,8 @@ import { CustomDropDown } from '../CustomDropDown'
 import { ToggleSwitch } from '../ToggleSwitch'
 
 const CardCol = ({ data }) => {
+  const [checked, setChecked] = useState(true)
+
   return (
     <Card style={{ color: '#000000DE', borderRadius: '20px', padding: '24px' }}>
       <div className="card-head">
@@ -16,11 +18,11 @@ const CardCol = ({ data }) => {
           <FilterInput />
           <div className="d-flex">
             <CustomDropDown />
-            <ToggleSwitch />
+            <ToggleSwitch checked={checked} setChecked={setChecked} />
           </div>
         </div>
 
-        <Outlet context={{ data }} />
+        <Outlet context={{ data, checked }} />
       </div>
     </Card>
   )

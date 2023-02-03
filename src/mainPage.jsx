@@ -9,7 +9,7 @@ const MainPage = () => {
 
   const { data } = useQuery(
     'usersData',
-    () => axios.get('https://randomuser.me/api/?results=6'),
+    () => axios.get('https://randomuser.me/api/?results=12'),
     {
       onSuccess: (res) => setUserArray(res.data.results),
     },

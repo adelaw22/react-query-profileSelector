@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import Switch from 'react-switch'
 import './toggleSwitch.css'
 
-export const ToggleSwitch = () => {
-  const [checked, setChecked] = useState(false)
+export const ToggleSwitch = ({ checked, setChecked }) => {
   const handleChange = (nextChecked) => {
     setChecked(nextChecked)
   }

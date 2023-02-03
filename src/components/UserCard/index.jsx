@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 import { MdMailOutline } from 'react-icons/md'
 import { TbPhoneCall } from 'react-icons/tb'
 import { HiArrowRight } from 'react-icons/hi'
 import './userCard.css'
 
-export const UserCard = ({ usersdata }) => {
+export const UserCard = ({ usersdata, checked }) => {
   return (
     <Card className="card-id my-4">
       <div className="users-details">
@@ -14,7 +15,11 @@ export const UserCard = ({ usersdata }) => {
         </div>
         <div className="details-wrapper">
           <p className="user-name">{`${usersdata.name.first} ${usersdata.name.last}`}</p>
-          <p className="user-location">{`${usersdata.location.street.number}, ${usersdata.location.street.name}, ${usersdata.location.city}, ${usersdata.location.country}`}</p>
+          <p className="user-location">
+            {`${usersdata.location.street.number}, ${usersdata.location.street.name}, ${usersdata.location.city}, `}
+            {checked && <span>{usersdata.location.country}</span>}
+          </p>
+
           <div className="users-contact">
             <div>
               <MdMailOutline />
@@ -25,9 +30,12 @@ export const UserCard = ({ usersdata }) => {
               <span>{usersdata.phone}</span>
             </div>
             <div>
-              <button>
-                <HiArrowRight />
-              </button>
+              <Link to={`/${usersdata.login.username}`}>
+                {' '}
+                <button>
+                  <HiArrowRight />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
