@@ -1,2 +1,2 @@
 # react-query-profileSelector
-# Site Domain name: users-data-profile.netlify.app
+# Site Domain name: https://usercast.netlify.app/
